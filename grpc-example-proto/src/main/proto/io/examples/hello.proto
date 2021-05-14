@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package io.examples;
+
+option java_multiple_files = true;
+
+service HelloService {
+  rpc Say(SayReq) returns (SayResp);
+}
+
+message SayReq {
+  string content = 1;
+}
+
+message SayResp {
+  string reply_content = 1;
+}
